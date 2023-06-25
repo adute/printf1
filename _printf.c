@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _printf --- print whatever
- * @format: the format string
+ * _printf - prints anything
+ * @format: string format
  *
- * Return:  the number of the bytes printed
+ * Return: bytes printed
  */
 int _printf(const char *format, ...)
 {
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			p++;
 		if (!get_specifier(p))
 			sum += print_from_to(start, p,
-				params.l_modifier || params.h_modifier ? p - 1 : 0);
+								 params.l_modifier || params.h_modifier ? p - 1 : 0);
 		else
 			sum += get_print_func(p, ap, &params);
 	}
