@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_specifier - finds the format func
+ * get_specifier --- finds the format function
  * @s: the format string
  *
  * Return: the number of bytes printed
@@ -39,7 +39,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 }
 
 /**
- * get_print_func - finds the format func
+ * get_print_func --- finds the format func
  * @s: the format string
  * @ap: argument pointer
  * @params: the parameters struct
@@ -111,7 +111,7 @@ int get_modifier(char *s, params_t *params)
 }
 
 /**
- * get_width - gets the width from the format string
+ * get_width --- gets the width from the format string
  * @s: the format string
  * @params: the parameters struct
  * @ap: the argument pointer

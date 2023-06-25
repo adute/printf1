@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * convert - converter function, a clone of itoa
+ * convert --- convert function
  * @num: number
  * @base: base
- * @flags: argument flags
- * @params: paramater struct
+ * @flags: argument
+ * @params: paramater
  *
  * Return: string
  */
@@ -22,13 +22,13 @@ char *convert(long int num, int base, int flags, params_t *params)
 	{
 		n = -num;
 		sign = '-';
-
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
-	do	{
+	do
+	{
 		*--ptr = array[n % base];
 		n /= base;
 	} while (n != 0);
@@ -59,8 +59,6 @@ int print_unsigned(va_list ap, params_t *params)
 	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 
-
-
 /**
  * print_address - prints address
  * @ap: argument pointer
@@ -81,4 +79,3 @@ int print_address(va_list ap, params_t *params)
 	*--str = '0';
 	return (print_number(str, params));
 }
-

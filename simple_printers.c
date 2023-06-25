@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_from_to - prints a range of char addresses
+ * print_from_to --- prints a range of char addresses
  * @start: starting address
  * @stop: stopping address
  * @except: except address
@@ -24,7 +24,7 @@ int print_from_to(char *start, char *stop, char *except)
 /**
  * print_rev - prints string in reverse
  * @ap: string
- * @params: the parameters struct
+ * @params: the parameters 
  *
  * Return: number bytes printed
  */
