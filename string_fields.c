@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * get_precision --- gets the precision
+ * get_precision - gets the precision
  * @p: the format string
  * @params: the parameters
  * @ap: the argument pointer
  *
- * Return: new pointer
+ * Return: new pointer/ the string
  */
 char *get_precision(char *p, params_t *params, va_list ap)
 {
