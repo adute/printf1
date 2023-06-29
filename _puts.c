@@ -18,9 +18,7 @@ int _putchar(char c)
 		count = 0;
 	}
 	if (c != BUF_FLUSH)
-	{
 		buf[count++] = c;
-	}
 	return (1);
 }
 
