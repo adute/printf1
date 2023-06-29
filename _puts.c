@@ -37,3 +37,25 @@ int _puts(char *str)
 	}
 	return (str - a);
 }
+
+/**
+ * _putchar - prints a character to stdout
+ * @c: the character
+ *
+ * Return: 1 on SUCCESS
+ * -1 on fail
+ */
+int _putchar(int c)
+{
+	static int count;
+	static char buf[OUTPUT_BUF_SIZE];
+
+	if (c == BUF_FLUSH || count >= OUTPUT_BUF_SIZE)
+	{
+		write(1, buf, count);
+		count = 0;
+	}
+	if (c != BUF_FLUSH)
+		buf[count++] = c;
+	return (1);
+}
